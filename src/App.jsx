@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
-import prettier from 'prettier';
-import parserBabel from 'prettier/parser-babel';
+// import prettier from 'prettier';
+// import parserBabel from 'prettier/parser-babel';
 import './App.css';
 
 function formatCode(code) {
