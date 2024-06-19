@@ -26,7 +26,7 @@ function App() {
   const [selection, setSelection] = useState('');
   const [items, setItems] = useState([]); // Initialize state for items
   useEffect(() => {
-    fetch('http://13.58.77.239:8080/algo/all')
+    fetch('http://18.223.212.123:8080/algo/all')
     .then(response => response.json())
     .then(data => {
       setItems(data); // Update state with fetched data
@@ -41,8 +41,10 @@ const handleSelectionChange = (event) => {
   // if (!quizData) return <div>Loading...</div>;
 
   return (
+    
     <div>
-      <select onChange={handleSelectionChange}>
+      <h1>Please select a sorting method.</h1>
+      <select onChange={handleSelectionChange} style={{ fontSize: '1.5rem', padding: '10px', width: '100%' }}>
         <option value="">Select an option</option>
         {items.map((item) => (
           <option key={item.id} value={item.id}>{item.name}</option>
