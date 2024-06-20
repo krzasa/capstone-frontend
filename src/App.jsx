@@ -26,7 +26,8 @@ function App() {
   const [selection, setSelection] = useState('');
   const [items, setItems] = useState([]); // Initialize state for items
   useEffect(() => {
-    fetch('http://18.223.212.123:8080/algo/all')
+    // .then() method is commonly used with Promises to handle the completion of asynchronous operations. 
+    fetch('http://18.222.226.133:8080/algo/all')
     .then(response => response.json())
     .then(data => {
       setItems(data); // Update state with fetched data
